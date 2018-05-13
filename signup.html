@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" rel="stylesheet">
+    <link href="css/signup.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid head">
+        <div class="row">
+            <div class=" text-center">
+                <a href="index.html"><img class="logo-img" src="img/siteicon.png"></a>
+                <a href="index.html"><h5 class="logo-text" id="logo-text">WaitList</h5></a>
+            </div>
+        </div>
+    </div>
+    <div id="login-box">
+        <div class="left" id="signupform">
+            <h1 class="signup-text">Sign up</h1>
+            <input type="text" name="username" placeholder="Username">
+            <input type="text" id="form-email" name="email" placeholder="E-mail">
+            <input type="password" id="form-password" name="password" placeholder="Password">
+            <input type="password" id="form-password" name="password2" placeholder="Retype password">
+            <div class="row text-center">
+                <input type="submit" id="signIn" class="btn " value="Sign In" onclick="handleSignIn();">
+                <input type="submit" id="signIn" class="btn " value="Sign Out" onclick="handleSignOut();">
+                
+                
+                
+            </div><br>
+            
+                <input type="submit" id="signup" class="btn" value="Sign Up" onclick="handleSignUp();">
+               
+                
+            
+            
+        </div>
+        <div class="right">
+            <span class="loginwith">Sign in with<br />social network</span>
+            <ul>
+                <li>
+                    <a id="fblogin" class="btn btn-block btn-social btn-facebook" onclick="handleFBLogin();"><i class="fa fa-facebook"></i>Log in with facebook</a>
+                </li>
+                <li>
+                    <a id="googlelogin" class="btn btn-block btn-social btn-google" onclick="handlegoogleLogin();"><i class="fa fa-google"></i>Log in with Google</a>
+                </li>
+                <li>
+                    <a id="twitterlogin" class="btn btn-block btn-social btn-twitter" onclick="handletwitterLogin();"><i class="fa fa-twitter"></i>Log in with Twitter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="or">OR</div>
+    </div>
+    <footer class="page-footer font-small">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <a class="fb-ic" href="https://www.facebook.com"><i class="fa fa-facebook fa-sm white-text fa-2x"> </i></a>
+                    <a class="li-ic" href="https://www.linkedin.com"><i class="fa fa-linkedin fa-sm white-text  fa-2x"> </i></a>
+                    <a class="ins-ic" href="https://www.instagram.com" "><i class="fa fa-instagram fa-sm white-text fa-2x "> </i></a>
+                        <a class="pin-ic " href="https://www.pinterest.com "><i class="fa fa-pinterest fa-sm white-text fa-2x "> </i></a>
+                    </div>
+                </div>
+        </div>
+        <div class="footer-copyright text-center ">
+            <div class="container ">
+              <small>© 2018 Copyright WaitList </small>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js "></script>
+    <script src="js/auth.js "></script>
+</body>
+
+</html>

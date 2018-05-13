@@ -1,0 +1,433 @@
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+.logo-text {
+    color: #384aa9;
+    font-weight: 400;
+    font-size: 21px;
+}
+
+#nav-current-time {
+    color: #384aa9;
+    font-weight: 700;
+}
+
+
+#body-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+    padding: 0;
+}
+
+.navbar {
+    box-shadow: none;
+}
+
+#signin-btn, #login-btn {
+    background-color: #fc3b77;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+
+
+
+/* Sidebar sizes when expanded and expanded */
+
+.sidebar-expanded {
+    width: 230px;
+}
+
+.sidebar-collapsed {
+    width: 60px;
+}
+
+
+
+
+
+
+/* Menu item*/
+
+#sidebar-container {
+    height: 50px;
+    color: white;
+}
+
+
+/* Submenu item*/
+
+#sidebar-container .list-group .sidebar-submenu a {
+    height: 45px;
+    padding-left: 30px;
+}
+
+.sidebar-submenu {
+    font-size: 0.9rem;
+}
+
+.ui-widget-content {
+    background: #ffffff;
+    border: 1px solid #DDDDDD;
+}
+
+.brand-logo {
+    width: 48px;
+    padding-right: 10px;
+}
+
+#brand-text {
+    color: #4054b2;
+    font-weight: 700;
+}
+
+#v-pills-tab a,
+.ui-widget-content {
+    color: #4054b2;
+}
+
+#v-pills-reserve-tab,
+#v-pills-setting-tab {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    margin-top: 10px;
+}
+
+#v-pills-home-tab {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+}
+
+#v-pills-tab a.active,
+.content-title,
+.wt-btn {
+    color: #ffffff;
+    background-color: #4054b2;
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#v-pills-tabContent table {
+    width: 100%;
+}
+
+#v-pills-tabContent thead,
+#v-pills-tabContent tbody,
+#v-pills-tabContent tr,
+#v-pills-tabContent td,
+#v-pills-tabContent th {
+    display: block;
+}
+
+#v-pills-tabContent tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+#v-pills-tabContent thead th {
+    height: 70px;
+}
+
+#v-pills-tabContent tbody {
+    height: 400px;
+    overflow-y: auto;
+}
+
+#v-pills-tabContent thead {
+    height: 70px;
+}
+
+
+#v-pills-tabContent tbody td:first-child,
+#v-pills-tabContent thead th:first-child {
+    width: 10%;
+    float: left;
+}
+
+#v-pills-tabContent tbody td,
+#v-pills-tabContent thead th {
+    width: 30%;
+    float: left;
+}
+
+.content1 {
+    height: 70px;
+    line-height: 70px;
+}
+
+.wt-btn {
+    width: 391px;
+    height: 62px;
+    border: 2px solid #4054b2;
+}
+
+.wt-btn:hover {
+    background-color: #ffffff;
+    color: #4054b2;
+    border: 2px solid #4054b2;
+}
+
+.waitlist-name-input-form-group,
+.waitlist-size-input-form-group {
+    margin-bottom: 0px;
+}
+
+.waitlist-name-input-form-group {
+    padding-top: 36px;
+}
+
+.xs-collapse {
+    display: none;
+    visibility: hidden;
+}
+
+.xs-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.xs-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+
+.btn-default.xs-toggle .icon-bar {
+    background-color: #888;
+}
+
+#dialog-confirm {
+    display: none;
+}
+
+.dialog-confirm-alert-icon {
+    float: left;
+    margin: 12px 12px 20px 0;
+}
+
+.btn.bmd-btn-fab.btn-info.delete-item-button,
+.btn.bmd-btn-fab.btn-info.delete-item-button:active:focus,
+.btn.bmd-btn-fab.btn-info.delete-item-button:active:hover,
+.btn.bmd-btn-fab.btn-info.add-item-button,
+.btn.bmd-btn-fab.btn-info.add-item-button:active:focus,
+.btn.bmd-btn-fab.btn-info.add-item-button:active:hover {
+    background-color: #fc4482;
+}
+
+#add-me-on-btn,
+#reservation-btn {
+    font-size: 21px;
+}
+
+#search-icon {
+    color: #4257af;
+}
+
+.custom-file-control,
+.form-control,
+.is-focused .custom-file-control,
+.is-focused .form-control {
+    background-image: linear-gradient(0deg, #fc4482 2px, rgba(0, 150, 136, 0) 0), linear-gradient(0deg, rgba(0, 0, 0, .26) 1px, transparent 0);
+}
+
+.modal-title {
+    color: #384aa9;
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.modal-dialog {
+    max-width: 600px;
+}
+
+#close-button {
+    background-color: #384aa9;
+    color: #ffffff;
+}
+
+
+
+.switch.round label .lever {
+    width: 54px;
+    height: 50px;
+    border-radius: 10em;
+}
+
+.switch.round label .lever:after {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    left: 4px;
+    top: 4px;
+}
+
+.options {
+    color: #384aa9;
+}
+
+.options-icons {
+    color: #384aa9;
+    font-size: 36px;
+}
+
+#close-button2 {
+    background-color: #ffffff;
+    color: #384aa9;
+    outline-width: 1px;
+    border-color: #384aa9;
+}
+
+
+
+
+
+/* Bootstrap Lightbox using Modal */
+
+#profile-grid {
+    overflow: auto;
+    white-space: normal;
+}
+
+#profile-grid .profile {
+    padding-bottom: 40px;
+}
+
+#profile-grid .panel {
+    padding: 0
+}
+
+#profile-grid .panel-body {
+    padding: 15px
+}
+
+#profile-grid .profile-name {
+    font-weight: bold;
+}
+
+#profile-grid .thumbnail {
+    margin-bottom: 6px;
+}
+
+#profile-grid .panel-thumbnail {
+    overflow: hidden;
+}
+
+#profile-grid .img-rounded {
+    border-radius: 4px 4px 0 0;
+}
+
+@media (min-width: 768px) {
+    #v-pills-tabContent tbody td,
+    #v-pills-tabContent thead th {
+        width: 18%;
+        float: left;
+    }
+
+    /* nav bar collapse */
+    .xs-toggle {
+        display: none;
+        visibility: hidden;
+    }
+    .xs-collapse {
+        display: block;
+        visibility: visible;
+    }
+
+    /* slideshow */
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active+.carousel-item,
+    .carousel-inner .active+.carousel-item+.carousel-item,
+    .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
+        transition: none;
+    }
+
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* left or forward direction */
+    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+input.contact {
+    width: 300px;
+    height: 60px;
+}
+
+
+/*footer*/
+
+footer .fb-ic,
+.li-ic,
+.ins-ic {
+    color: #384aa9;
+}
+
+footer a:hover {
+    color: #fc336c;
+}
+
+footer .pin-ic {
+    color: #384aa9;
+}

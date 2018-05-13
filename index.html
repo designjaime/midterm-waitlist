@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,700">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/siteicon.png">
+    <title>waitlist</title>
+</head>
+
+<body class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top mt-md-2">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#v-pills-home">
+          <img src="img/siteicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <span class="logo-text menu-collapsed">WaitList</span>
+        </a>
+        <div class="text-center" id="nav-current-time"></div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav nav" role="tablist" aria-label="navigation">
+                <li class="nav-item d-sm-block d-md-none">
+                    <a class="nav-link active" id="nav-item-home" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                </li>
+                <li class="nav-item d-sm-block d-md-none">
+                    <a class="nav-link" id="nav-item-reserve" data-toggle="pill" href="#v-pills-reserve" role="tab" aria-controls="v-pills-reserve" aria-selected="false">Reservation</a>
+                </li>
+                <li class="nav-item d-sm-block d-md-none">
+                    <a class="nav-link" id="nav-item-setting" data-toggle="pill" href="#v-pills-menu" role="tab" aria-controls="v-pills-setting" aria-selected="false">Today's Menu</a>
+                </li>
+                <li class="nav-item d-sm-block d-md-none">
+                    <a class="nav-link" id="nav-item-menu" data-toggle="pill" href="#v-pills-setting" role="tab" aria-controls="v-pills-menu" aria-selected="false">About us</a>
+                </li>
+                <li class="nav-item d-sm-block d-md-none">
+                    <a class="btn btn-sm" id="login-btn" href="signup.html" role="button">LOGIN</a>
+                    <a class="btn btn-sm mr-3" id="signin-btn" href="signup.html" role="button">SIGN UP</a>
+                </li>
+            </ul>
+        </div>
+        <div class="bmd-form-group bmd-collapse-inline pull-xs-right d-none d-md-flex">
+            <a class="btn mr-3" id="login-btn" href="signup.html" role="button">LOGIN</a>
+            <a class="btn mr-3" id="signin-btn" href="signup.html" role="button">SIGN UP</a>
+            <button class="btn bmd-btn-icon" for="search" data-toggle="collapse" data-target="#collapse-search" aria-expanded="true" aria-controls="collapse-search">
+                <i class="material-icons" id="search-icon">search</i>
+            </button>
+            <span id="collapse-search" class="collapse">
+                <input class="form-control" type="text" id="search" placeholder="Enter your name">
+            </span>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="nav flex-column nav-pills xs-collapse" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active text-center" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="material-icons">home</i><div class="d-none d-lg-flex justify-content-center">Home</div></a>
+                <a class="nav-link text-center" id="v-pills-reserve-tab" data-toggle="pill" href="#v-pills-reserve" role="tab" aria-controls="v-pills-reserve" aria-selected="false"><i class="material-icons">date_range</i><div class="d-none d-lg-flex justify-content-center">Reservation</div></a>
+                <a class="nav-link text-center" id="v-pills-menu-tab" data-toggle="pill" href="#v-pills-menu" role="tab" aria-controls="v-pills-menu" aria-selected="false"><i class="material-icons">restaurant_menu</i><div class="d-none d-lg-flex justify-content-center">Today's Menu</div></a>
+                <a class="nav-link text-center" id="v-pills-setting-tab" data-toggle="pill" href="#v-pills-setting" role="tab" aria-controls="v-pills-setting" aria-selected="false"><i class="material-icons">people</i><div class="d-none d-lg-flex justify-content-center">About Us</div></a>
+            </div>
+        </div>
+        <div class="col-md-10 p-0">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab nav-item-home">
+                    <div class="waitlist-table">
+                        <table class="table-responsive">
+                            <thead class="thead-dark">
+                                <tr class="content-title text-center">
+                                    <th scope="row col" class="content1">#</th>
+                                    <th scope="row col" class="content1">Name</th>
+                                    <th scope="row col" class="content1">Number of Party</th>
+                                    <th scope="row col" class="content1 d-none d-md-flex">Check-In</th>
+                                    <th scope="row col" class="content1 d-none d-md-flex">Expected</th>
+                                    <th scope="row col" class="content1">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="list-table">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container d-flex justify-content-center">
+                        <button class="wt-btn" id="add-me-on-btn">Add Me On</button>
+                    </div>
+                    <br>
+                </div>
+                <div class="tab-pane fade" id="v-pills-reserve" role="tabpanel" aria-labelledby="v-pills-reserve-tab nav-item-reserve">
+                    <div class="reservation-table">
+                        <table class="table-responsive">
+                            <thead class="thead-dark">
+                                <tr class="content-title text-center">
+                                    <th scope="row col" class="content1">#</th>
+                                    <th scope="row col" class="content1">Name</th>
+                                    <th scope="row col" class="content1">Number of Party</th>
+                                    <th scope="row col" class="content1 d-none d-md-flex">Date</th>
+                                    <th scope="row col" class="content1 d-none d-md-flex">Time</th>
+                                    <th scope="row col" class="content1">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="list-table">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container d-flex justify-content-center">
+                        <button class="wt-btn" id="reservation-btn">Make A Reservation</button>
+                    </div>
+                    <br>
+                </div>
+                <div class="tab-pane fade" id="v-pills-setting" role="tabpanel" aria-labelledby="v-pills-setting-tab nav-item-setting">
+                    <div class="container text-center">
+                        <br>
+                        <br>
+                        <img class="img-fluid" src="img/restaurant.jpg">
+                        <br>
+                        <br>
+                        <h5 class="logo-text" id="logo-text">Our Team</h5>
+                        <br>
+                        <p>This restaurant is in business to create the structure and systems needed to allow our customers access to the majority of their away-from-home daily meal requirements on a one-stop-shop basis. All our products shall be of the highest quality and value, be healthy, nutritious and provided with outstanding personal services at the lowest possible prices consistent with a fair return on investment for our shareholders, job enhancement/security for our employees and a level of community involvement by everyone connected with our business. All of our products and services shall be delivered consistently and measured one satisfied customer at a time, whether by company-owned or franchised operations, in superior, clean, convenient, fun and friendly neighborhood environments. We pledge to make Yoshinoya the best place to eat and the best place to work.</p>
+                        <br>
+                        <br>
+                        <h5 class="logo-text" id="logo-text">We'd like to hear from you!</h5>
+                        <br>
+                        <form>
+                            <input id="example" type="text">
+                            <input type="reset" id="signin-btn" value="submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-menu" role="tabpanel" aria-labelledby="v-pills-menu-tab nav-item-menu">
+                    <div class="container">
+                        <div class="row text-center text-lg-left">
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-1.jpg" alt=""></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-2.jpg" alt=""></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-3.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-4.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-5.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-6.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-7.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-8.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-9.jpg" alt=""></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-10.jpg" alt=""></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-11.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-12.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-13.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-14.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-15.jpg" alt=""> </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6">
+                                <a data-toggle="modal" href="#myModal" class="d-block mb-4 h-100">
+                                <img class="img-fluid" src="img/food-16.jpg" alt=""> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <div class="container">
+                                <h4 class="modal-title text-center"><strong>Today's Menu<strong></h4>
+                            </div>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="img-fluid" src="img/food-7.jpg" alt="" id="modal-main-img">
+                                    </div>
+                                    <div class="col-sm-6 mt-4">
+                                        <h6 class="text-center"> Hamburger with fries<br><br>$17.99 <br><br><small>
+                                          Seasoned Angus beef patty with sea salt and black pepper, iceberg lettuce, kosher dill pickle, red onions, tomatoes & Prime Burger Sauce
+
+                                            Jack's Prime Classic Hamburger
+                                            Seasoned Angus beef patty with sea salt and black pepper, iceberg lettuce, kosher dill pickle, red onions, tomatoes & Prime Burger Sauce</small>
+                                            </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn" id="close-button" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="today-menu container-fluid" id="v-pills-menu">
+                <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                        <div class="carousel-item col-md-3  active">
+                            <div class="panel panel-default">
+                                <div class="panel-thumbnail">
+                                    <a data-toggle="modal" href="#myModal" title="image 1" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="img/food-1.jpg" alt="slide 1">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-3 ">
+                            <div class="panel panel-default">
+                                <div class="panel-thumbnail">
+                                    <a data-toggle="modal" href="#myModal" title="image 3" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="img/food-2.jpg" alt="slide 2">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-3 ">
+                            <div class="panel panel-default">
+                                <div class="panel-thumbnail">
+                                    <a data-toggle="modal" href="#myModal" title="image 4" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="img/food-3.jpg" alt="slide 3">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-3 ">
+                            <div class="panel panel-default">
+                                <div class="panel-thumbnail">
+                                    <a data-toggle="modal" href="#myModal" title="image 5" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="img/food-4.jpg" alt="slide 4">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-3 ">
+                            <div class="panel panel-default">
+                                <div class="panel-thumbnail">
+                                    <a data-toggle="modal" href="#myModal" title="image 6" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="img/food-5.jpg" alt="slide 5">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-3 ">
+                            <div class="panel panel-default">
+                                <div class="panel-thumbnail">
+                                    <a data-toggle="modal" href="#myModal" title="image 7" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="img/food-6.jpg" alt="slide 6">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-3 ">
+                            <div class="panel panel-default">
+                                <div class="panel-thumbnail">
+                                    <a data-toggle="modal" href="#myModal" title="image 8" class="thumb">
+                      <img class="img-fluid mx-auto d-block" src="img/food-7.jpg" alt="slide 7">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-3  ">
+                            <div class="panel panel-default">
+                                <div class="panel-thumbnail">
+                                    <a data-toggle="modal" href="#myModal" title="image 2" class="thumb">
+                     <img class="img-fluid mx-auto d-block" src="img/food-8.jpg" alt="slide 8">
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+                    <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+                </div>
+            </div>
+        </div>
+        <div id="dialog-confirm" title="Delete Confirmation">
+            <p><span class="ui-icon ui-icon-alert dialog-confirm-alert-icon"></span>You will be removed from the list.
+                <br>Are you sure?</p>
+        </div>
+    </div>
+    <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Seating Options</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <div class="switch">
+                                <i class="options-icons material-icons">child_care</i>
+                                <p class="options">High chair</p>
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="switch">
+                                <i class="options-icons material-icons">accessible</i>
+                                <p class="options">Accessible</p>
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="switch">
+                                <i class="options-icons material-icons">person</i>
+                                <p class="options">Bar</p>
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn mr-2" id="close-button2" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn" id="close-button" data-dismiss="modal">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-10 text-center">
+                <div class="social-icons mb-2">
+                    <a class="fb-ic mr-3" href="https://www.facebook.com"><i class="fa fa-facebook fa-sm white-text fa-2x"> </i></a>
+                    <a class="li-ic mr-3" href="https://www.linkedin.com"><i class="fa fa-linkedin fa-sm white-text  fa-2x"> </i></a>
+                    <a class="ins-ic mr-3" href="https://www.instagram.com" "><i class="fa fa-instagram fa-sm white-text fa-2x "> </i></a>
+                    <a class="pin-ic " href="https://www.pinterest.com "><i class="fa fa-pinterest fa-sm white-text fa-2x "> </i></a>
+                    
+                </div>
+                <small>© 2018 Copyright WaitList </small>
+            </div>
+        </div>
+        
+        
+    </footer>
+    
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js " integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9 " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js "></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js "></script>
+    <script src="js/index.js "></script>
+</body>
+
+</html>
